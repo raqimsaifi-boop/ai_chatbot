@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Last Signal | AI Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">LS</div>
+            <div>
+                <h2>The Last Signal</h2>
+                <span>Knowledge Assistant</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <p class="section-label">YOUR KNOWLEDGE BASE</p>
+
+            <div class="document-card">
+                <div class="document-icon">PDF</div>
+                <div>
+                    <strong>Series Guide</strong>
+                    <span>The Last Signal · Season 1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar-note">
+            <span class="status-dot"></span>
+            <span>Local knowledge base connected</span>
+        </div>
+
+        <div class="sidebar-footer">
+            Powered by Groq + ChromaDB
+        </div>
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h3>AI Research Assistant</h3>
+                <p>Ask questions about The Last Signal</p>
+            </div>
+
+            <div class="model-label">
+                <span class="status-dot"></span>
+                RAG Assistant
+            </div>
+        </header>
+
+
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome-screen" id="welcomeScreen">
+
+                <div class="welcome-icon">✦</div>
+
+                <h1>Explore the story.</h1>
+
+                <p>
+                    Ask anything about the characters, episodes,
+                    mysteries and events of The Last Signal.
+                </p>
+
+                <div class="suggestions">
+
+                    <button class="suggestion"
+                            data-question="What is The Last Signal about?">
+                        <span>01</span>
+                        What is this series about?
+                    </button>
+
+                    <button class="suggestion"
+                            data-question="Who is Mara Venn?">
+                        <span>02</span>
+                        Who is Mara Venn?
+                    </button>
+
+                    <button class="suggestion"
+                            data-question="What are the four notes in Lantern Code 4?">
+                        <span>03</span>
+                        Explain Lantern Code 4
+                    </button>
+
+                    <button class="suggestion"
+                            data-question="What happened to the Blue Ledger?">
+                        <span>04</span>
+                        What happened to the Blue Ledger?
+                    </button>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer class="input-section">
+
+            <form id="chatForm">
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask anything about The Last Signal..."
+                        rows="1"
+                        required
+                    ></textarea>
+
+                    <button type="submit" id="sendButton">
+                        <span>Send</span>
+                        <span>↑</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+            <p class="input-disclaimer">
+                AI responses are generated from your document.
+                Always verify important information.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+A. Recursive character chunking
+Best starting point
+Splits text using a hierarchy of separators, trying to preserve paragraphs and sentences before splitting smaller.
+Original document
+
+Paragraph 1 · Paragraph 2 · Paragraph 3 · Paragraph 4
+
+
+Chunk 1
+
+Paragraph 1 + 2
+
+
+Chunk 2
+
+Paragraph 2 + 3
+
+
+
+
+B. Topic-based / semantic chunking
+
+Groups sentences based on their meaning rather than a fixed number of words or characters.
+Original document
+
+Character details, episode events, locations, clues, timeline...
+
+
+Topic 1: Characters
+
+Information about Mara, Daniel and others
+
+Topic 2: Episodes
+
+Episode summaries and events
+
+Topic 3: Clues
+
+Lantern Code and other mysteries
+
+
+
+C. Hierarchical chunking
+
+Creates large parent sections and smaller child chunks. Retrieval can find a child chunk and then use its parent for broader context.
+Parent: Episode 1
+
+Complete episode summary
+
+
+Child 1
+
+Opening events
+
+
+Child 2
+
+Important discovery
